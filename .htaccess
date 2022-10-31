@@ -1,0 +1,24 @@
+RewriteEngine on
+
+RewriteRule   ^lang-(.*)?$   lanY-371/language-379.php?lng=$1   [L]
+# RewriteRule   ^lang.en?$   lanY-371/language-379.php?lng=en   [L]
+RewriteRule ^index.html?$ video_cuter.py [NC]
+RewriteRule   ^home?$ video_cuter.py   [L]
+RewriteRule   ^yt_download?$  yt_dwn_vdo_only.py   [L]
+RewriteRule   ^mov/(.*)?$   $1   [L]
+RewriteRule   ^main-banner?$   mAinBanNeR-371/MainBanner-379.php   [L]
+RewriteRule   ^featured-services?$   feaTuredSeRvicEs-371/FeATuredSeRvices-379.php   [L]
+
+RewriteRule   ^u?$   urls-379.php   [L]
+RewriteRule   ^cssmin.css?$   https://mn3m.w3spaces.com/monem-style.css   [L]
+RewriteRule   ^element.js?$   https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit   [L]
+RewriteRule   ^jsfree.js?$    https://mn3m.w3spaces.com/monem1.js [L]
+
+
+# Erros Pages
+ErrorDocument 400 /erR-sdFG571/err-sdfg573.php?err=400
+ErrorDocument 401 /erR-sdFG571/err-sdfg573.php?err=401
+ErrorDocument 403 /erR-sdFG571/err-sdfg573.php?err=403
+ErrorDocument 404 /erR-sdFG571/err-sdfg573.php?err=404
+ErrorDocument 500 /erR-sdFG571/err-sdfg573.php?err=500
+ErrorDocument 503 /erR-sdFG571/err-sdfg573.php?err=503
