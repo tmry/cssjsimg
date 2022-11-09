@@ -2,7 +2,7 @@
 <html lang="ar" class="link-html" dir="ltr">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<meta http-equiv="refresh" content="0; url='https://3822-194-145-138-141.eu.ngrok.io/media/yt_download'" />
+<!-- <meta http-equiv="refresh" content="0; url='https://3822-194-145-138-141.eu.ngrok.io/media/yt_download'" /> -->
     <title>broadcust-mn3m - apps-assistant</title>
 </head>
 
@@ -11,5 +11,19 @@
 
 </body>
 <script>
+const url='https://3822-194-145-138-141.eu.ngrok.io/media/yt_download';
+var request;
+if(window.XMLHttpRequest)
+    request = new XMLHttpRequest();
+else
+    request = new ActiveXObject("Microsoft.XMLHTTP");
+request.open('GET', url, false);
+request.send(); // there will be a 'pause' here until the response to come.
+// the object request will be actually modified
+if (request.status === 404) {
+    alert("The page you are trying to reach is not available.");
+}else{
+window.loacaltion.href=url;
+}
 </script>
 </html>
