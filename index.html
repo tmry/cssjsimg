@@ -1,50 +1,45 @@
-<!DOCTYPE html>
-<html oncontextmenu="return false" onselectstart="return false">
-<head>
-<title>Youtube video downloader</title>
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<link rel="shortcut icon" href="youtubedownloader2.png" />
-<link rel="icon" type="image/ico" href="youtubedownloader2.png" />
-<style type="text/css">
-	.bdy {
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const urlMain = "https://2a33-194-145-138-141.eu.ngrok.io/media/";
+var dmn = '';
+if(urlParams.has('dmn')) dmn = urlParams.get('dmn');
+const htmlTag = document.getElementById("html-tag");
+const stt ='<head> \
+<title>Youtube video downloader</title> \
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /> \
+<link rel="shortcut icon" href="youtubedownloader2.png" /> \
+<link rel="icon" type="image/ico" href="youtubedownloader2.png" /> \
+<style type="text/css"> \
+	.bdy { \
     
-    background: #000;
-}
-.ifrm {
-display: block;background: #000;border-radius: 15px;line-height:60px;width:96%;height:480px;margin-top:1em;text-align:center;color:white;box-shadow:inset 0 0 0 1px;
-}
-.ifrm2{
-position:fixed; top:0; left:0; bottom:0; right:0; width:1000px; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;
-}
-.ifrm3{
-display:block;background:#000;border-radius:15px;width:96%;height:100%;margin-top:1em;text-align:center;color:white;box-shadow:inset 0 0 0 1px;
-}
-.sky-blue-color {
-    color:skyblue;
-}
-</style>
-</head>
-<body class="bdy">
-<center>
-<!-- <button>Download YouTube video</button>
-<div  id="fulscr" style="display:none;"> -->
-<object data="https://2a33-194-145-138-141.eu.ngrok.io/media/yt_download" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></object>
-<!-- </div> -->
-</center>
-</body>
-<!-- <script>
-addEventListener("click", event => {
-    const btn = event.target;
-    if (btn.tagName.toLowerCase() !== "button") return;
-    const id = btn.textContent;
-    const div = document.getElementById('fulscr');
-	div.style.display='block';
-    if (div.requestFullscreen) 
-	    div.requestFullscreen();
-    else if (div.webkitRequestFullscreen) 
-    	div.webkitRequestFullscreen();
-    else if (div.msRequestFullScreen) 
-      div.msRequestFullScreen();
-});
-</script> -->
+    background: #000; \
+} \
+.ifrm { \
+display: block;background: #000;border-radius: 15px;line-height:60px;width:96%;height:480px;margin-top:1em;text-align:center;color:white;box-shadow:inset 0 0 0 1px; \
+} \
+.ifrm2{ \
+position:fixed; top:0; left:0; bottom:0; right:0; width:1000px; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; \
+} \
+.ifrm3{ \
+display:block;background:#000;border-radius:15px;width:96%;height:100%;margin-top:1em;text-align:center;color:white;box-shadow:inset 0 0 0 1px; \
+} \
+.sky-blue-color { \
+    color:skyblue; \
+} \
+</style> \
+</head> \
+<body class="bdy"> \
+<center> \
+<!-- <button>Download YouTube video</button> \
+<div  id="fulscr" style="display:none;"> --> \
+<object data="' + urlMain + dmn +'" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></object> \
+<!-- </div> --> \
+</center> \
+</body>';
+htmlTag.innerHTML = stt;
+</script>
+<!DOCTYPE html>
+<html oncontextmenu="return false" onselectstart="return false" id="html-tag">
+
 </html>
