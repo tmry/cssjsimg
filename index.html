@@ -29,6 +29,12 @@ display:block;background:#000;border-radius:15px;width:96%;height:100%;margin-to
 </center>
 </body>
 <script>
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
 const titleTag = document.getElementById("title-tag");
 const htmlTag = document.getElementById("obj-url");
 const queryString = window.location.search;
